@@ -14,12 +14,14 @@ bankHand = []
 bankPunkte = 0
 bankSiege = 0
 
-def randomKarte(karteZiehen):
+def randomKarte(karteZiehen): # True: Spieler bekommt Karte, False: Bank bekommt karte
     zufallszahl = random.randint(0, len(deck))
     if karteZiehen == True:
         spielerHand.append(deck[zufallszahl])
+        print('Deine aktuelle Hand: ' + spielerHand)
     else:
         bankHand.append(deck[zufallszahl])
+        print('Die aktuelle Hand der Bank: ' + bankHand)
     deck.pop(zufallszahl)
 
 def reset():
@@ -47,3 +49,11 @@ def reset():
 
 while spielerSiege < 10 or bankSiege < 10:
     reset()
+    randomKarte(True)
+    randomKarte(True)
+    randomKarte(False)
+    randomKarte(False)
+
+    while input('Möchtest du  noch eine Karte ziehen? (Ja/Nein') == 'Ja':
+        randomKarte(True)
+
