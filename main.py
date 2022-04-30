@@ -1,3 +1,3 @@
-print('hi')
-for i in range(10):
-    print(i)
+#BlackJack in Python
+#Stand: 30.04.2022
+
