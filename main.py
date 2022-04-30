@@ -57,4 +57,40 @@ while spielerSiege < 10 or bankSiege < 10:
     while input('Möchtest du  noch eine Karte ziehen? (Ja/Nein') == 'Ja':
         randomKarte(True)
 
-#test
+for i in range(len(spielerHand)):
+    if spielerHand[i] == '2':
+        spielerPunkte + + 2
+    elif spielerHand[i] == '3':
+        spielerPunkte + + 3
+    elif spielerHand[i] == '4':
+        spielerPunkte + + 4
+    elif spielerHand[i] == '5':
+        spielerPunkte + + 5
+    elif spielerHand[i] == '6':
+        spielerPunkte + + 6
+    elif spielerHand[i] == '7':
+        spielerPunkte + + 7
+    elif spielerHand[i] == '8':
+        spielerPunkte + + 8
+    elif spielerHand[i] == '9':
+        spielerPunkte + + 9
+    elif spielerHand[i] == '10':
+        spielerPunkte + + 10
+    elif spielerHand[i] == 'Bube':
+        spielerPunkte + + 10
+    elif spielerHand[i] == 'Dame':
+        spielerPunkte + + 10
+    elif spielerHand[i] == 'König':
+        spielerPunkte + + 10
+    elif spielerHand[i] == 'Ass':
+        ass = input('Soll das Ass als 1 oder 11 gewertet werden?')
+        if ass == 1:
+            spielerPunkte + + 1
+        elif ass == 11:
+            spielerPunkte + + 11
+        else:
+            print('Falsche Eingabe, Das Ass wird als 11 gewertet')
+            spielerPunkte + + 11
+
+print('Deine Punkte: ' + spielerPunkte)
+
