@@ -31,8 +31,8 @@ def reset():
     deck.clear()
     spielerHand.clear()
     bankHand.clear()
-    spielerPunkte = 0
-    bankPunkte = 0
+    #spielerPunkte = 0
+    #bankPunkte = 0
 
     for i in range(24):
         deck.append('2')
@@ -51,6 +51,8 @@ def reset():
 
 while spielerSiege < 10 or bankSiege < 10:
     reset()
+    spielerPunkte = 0
+    bankPunkte = 0
 
     randomKarte(True)
     randomKarte(True)
