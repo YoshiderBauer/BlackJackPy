@@ -1,0 +1,32 @@
+1 Spieler gegen die Bank (Computer)
+
+(ausgabe Spielregeln)
+
+Spieler und Bank bekommen jeweils 2 zufällige Karten
+hand des Spielers anzeigen
+Spieler entscheidet, ob er noch Karte zieht
+ja: zieht karte /\
+nein: \/
+
+wdh bis punkteBank > 17:
+bank zieht zufällige karte
+hand der bank wird ausgegeben
+
+abfrage Spieler: Ass als 1 oder 11
+
+Spieler gewonnen: spielerSiege++
+   punkteBank > 21, spielerPunkte =< 21
+   spielerPunkte > punkteBank, spielerPunkte > 21
+
+beide gewonnen: beide =< 21 || spielerPunkte = bankPunkte
+beide verloren: beide > 21
+
+Bank gewinnt: bankSiege++
+   spielerPunkte > 21, bankPunkte =< 21
+   bankPunkte > spielerPunkte, bankPunkte > 21
+
+Ausgabe Gewinner + punkte, bankSiege, spielerSiege
+
+wenn Siege = 10 ende, sonst erneut spielen
+
+(wenn Spieler 10 Siege: Ballons)
