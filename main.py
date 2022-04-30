@@ -51,6 +51,7 @@ def reset():
 
 while spielerSiege < 10 or bankSiege < 10:
     reset()
+
     randomKarte(True)
     randomKarte(True)
     randomKarte(False)
@@ -86,9 +87,9 @@ while spielerSiege < 10 or bankSiege < 10:
             spielerPunkte = spielerPunkte + 10
         elif spielerHand[i] == 'Ass':
             ass = input('Soll das Ass als 1 oder 11 gewertet werden? ')
-            if ass == 1:
+            if ass == '1':
                 spielerPunkte = spielerPunkte + 1
-            elif ass == 11:
+            elif ass == '11':
                 spielerPunkte = spielerPunkte + 11
             else:
                 print('Falsche Eingabe, Das Ass wird als 11 gewertet')
