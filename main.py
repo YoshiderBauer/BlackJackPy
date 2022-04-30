@@ -57,3 +57,4 @@ while spielerSiege < 10 or bankSiege < 10:
     while input('Möchtest du  noch eine Karte ziehen? (Ja/Nein') == 'Ja':
         randomKarte(True)
 
+#test
