@@ -62,7 +62,7 @@ def randomKarte(player):
     return karte
 
 
-def reset():
+def generateDeck():
 
     deck.clear()
     spielerHand.clear()
@@ -86,7 +86,7 @@ def reset():
 while spielerSiege < 10 or bankSiege < 10:
     spielerPunkte = 0
     bankPunkte = 0
-    reset()
+    generateDeck()
 
     spielerPunkte = spielerPunkte + randomKarte(True)
     spielerPunkte = spielerPunkte + randomKarte(True)
